@@ -27,16 +27,9 @@ import androidx.lifecycle.*
 import com.example.android.eggtimernotifications.receiver.AlarmReceiver
 import com.example.android.eggtimernotifications.R
 import com.example.android.eggtimernotifications.util.cancelNotifications
-import com.example.android.eggtimernotifications.util.sendNotification
 import kotlinx.coroutines.*
 
 class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
-
-    private val REQUEST_CODE = 0
-    private val TRIGGER_TIME = "TRIGGER_AT"
-
-    private val minute: Long = 60_000L
-    private val second: Long = 1_000L
 
     private val timerLengthOptions: IntArray
     private val notifyPendingIntent: PendingIntent
@@ -190,4 +183,13 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
         withContext(Dispatchers.IO) {
             prefs.getLong(TRIGGER_TIME, 0)
         }
+
+    companion object {
+
+        private const val REQUEST_CODE = 0
+        private const val TRIGGER_TIME = "TRIGGER_AT"
+
+        private const val minute: Long = 60_000L
+        private const val second: Long = 1_000L
+    }
 }

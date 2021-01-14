@@ -1,3 +1,11 @@
+
+* Udacity Course UD940: Advanced Android with Kotlin
+* Lesson 1: Using Notifications
+* Instructor: Murat Yener
+* Project: Egg Timer
+
+https://www.udacity.com/course/advanced-android-with-kotlin--ud940
+
 EggTimer - Final Code 
 ============================================================================
 
